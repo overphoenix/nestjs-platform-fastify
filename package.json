@@ -1,0 +1,52 @@
+{
+  "name": "nestjs-platform-fastify",
+  "version": "1.0.0",
+  "description": "Nest - modern, fast, powerful node.js web framework (@platform-fastify)",
+  "author": "Kamil Mysliwiec",
+  "license": "MIT",
+  "homepage": "https://nestjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taaliman/nestjs-platform-fastify"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier \"lib/**/*.ts\" --write",
+    "lint": "eslint 'lib/**/*.ts' --fix",
+    "prepublish:next": "npm run build",
+    "publish:next": "npm publish --access public --tag next",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "test:e2e": "jest --config e2e/jest-e2e.json",
+    "prerelease": "npm run build",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.0.0",
+    "@fastify/formbody": "7.0.1",
+    "@fastify/middie": "8.0.0",
+    "fastify": "4.0.2",
+    "light-my-request": "5.0.0",
+    "path-to-regexp": "3.2.0",
+    "tslib": "2.4.0"
+  },
+  "peerDependencies": {
+    "@fastify/static": "^5.0.0",
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/core": "^8.0.0",
+    "point-of-view": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@fastify/static": {
+      "optional": true
+    },
+    "point-of-view": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "release-it": "^15.1.0"
+  }
+}
