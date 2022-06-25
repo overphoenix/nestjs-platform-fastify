@@ -20,3 +20,4 @@ dist
 index.js
 index.d.ts
 **/*.js
+**/*.d.ts
