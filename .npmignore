@@ -1,0 +1,19 @@
+# source
+index.ts
+**/*.ts
+!**/*.d.ts
+package-lock.json
+.eslintignore
+.eslintrc.js
+tsconfig.json
+.prettierrc
+.circleci
+.github
+
+# misc
+renovate.json
+npm-debug.log
+.DS_Store
+.commitlintrc.json
+.release-it.json
+CONTRIBUTING.md
